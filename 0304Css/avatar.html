@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Avatar</title>
+    <style>
+        /* img{
+            border-radius: ;
+        } */
+        .avatar{
+            width: 150px;
+            height: 150px;
+            background: #000;
+            overflow: hidden;
+            /* visable可以看到全圖、auto卷軸、hidden內容只顯示設的寬高理、scroll也是卷軸全圖 */
+            border-radius: 50%;
+            /* 決定容器大小後，決定它的形狀 */
+        }
+        .avatar img{
+            width: 100%;
+            /* 府合容器大小(100%=150px)，直接打100%是最方便的 */
+        }
+    </style>
+</head>
+<body>
+    <figure class="avatar">
+        <img src="example/images/dr_strange.jpg" alt="">
+    </figure>
+    Dr.strange
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1</title>
+    <style>
+        body{
+            background: rgb(192, 191, 191);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .card{
+            height: 425px;
+            width: 250px;
+            background: rgb(252, 251, 251);
+            margin: 25px 60px;
+            /* 外邊距，對網頁左、上的距離 */
+            /* padding: 25px; */
+            /* 內邊距離 */
+            border-radius: 10px;
+            /* 圓角弧度 */
+            transition: .5s;
+            overflow: hidden;
+            position: absolute;
+        }
+        .shadow1:hover{
+            transform: translate(-20px, -20px);
+            box-shadow: 10px 10px 0 rgba(74, 74, 250, 0.918),20px 20px 0 rgba(74, 74, 250, 0.664),30px 30px 0 rgba(74, 74, 250, 0.418),40px 40px 0 rgba(74, 74, 250, 0.178);
+            /* 也可以直接打在card裡面 */
+        }
+        .banner{
+            height: 160px;
+            background: url(example/images/light.jpg) center center;
+            background-size: cover;
+        }
+        .avatar{
+            width: 120px;
+            height: 120px;
+            background: #fff;
+            overflow: hidden;
+            border-radius: 50%;
+            /* margin: -60px auto; */
+            /* 水平置中 */
+            margin: 0;
+            position: absolute;
+            top: 90px;
+            left: 70px;
+        }
+        .avatar img{
+            width: 100%;
+        }
+        .h2{
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid rgb(182, 180, 180);
+            /* boeder-bottom線在下面，top反之，粗細/線的樣式/顏色 */
+            padding-bottom: 20px;
+            /* 調整線跟字的距離 */
+            
+        }
+        .p1{
+            padding: 10px;
+            text-align: left;
+            color: rgb(109, 110, 110);
+        }
+        .content{
+            padding: 20px;
+            border: 20px solid transparent;
+            /* 邊框的粗細/線條樣式/顏色透明(通常有圖片會設定透明的顏色) */
+            border-image: url(example/images/border-image2.png) 20 round;
+        }
+    </style>
+</head>
+<body>
+    <div class="card shadow1">
+        <div class="banner">
+
+        </div>
+        <figure class="avatar">
+            <img src="example/images/dr_strange.jpg" alt="">
+        </figure>
+        <div class="content">
+            <h2 class="h2">Dr.Strange</h2>
+            <p class="p1">Hello,I'm Steve Strange</p>
+        </div>
+    </div>
+</body>
+</html>

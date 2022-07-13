@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7c 地球太陽月亮範例</title>
+    <style>
+        :root{
+            --rotateWidth: 200px;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0) translate(var(--rotateWidth));
+            }
+            100%{
+                transform: rotate(360deg) translate(var(--rotateWidth));
+                /* 360角度自轉一圈 */
+            }
+        }
+        @keyframes rotateMoon{
+            0%{
+                transform: rotate(0) translate(60px);
+            }
+            100%{
+                transform: rotate(360deg) translate(60px);
+            }
+        }
+        body{
+            background: url(/example/images/space-bg.jpg);
+        }
+        .wrapper{
+            width: 500px;
+            height: 500px;
+            /* border: 1px solid #ccc; */
+            margin: 10px auto;
+            position: relative;
+        }
+        .sun{
+            /* relative,absolute,fixed,sticky */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /* 位子置中 */
+            transform: translate(-50%, -50%);
+            /* z-index: 2; */
+        }
+        .orbit{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 1px solid #ccc;
+        }
+        .earth-warp{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -36px 0 0 -36px;
+            /* 位子置中 */
+            /* transform: translate(-50%, -50%); */
+            animation: rotate 7s infinite linear;
+            /* 地球自轉 */
+            width: 72px;
+            height: 72px;
+            /* background: #ccc; */
+        }
+        .moon{
+            --rotateWidth: 60px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -24px 0 0 -24px;
+            animation: rotate 10s infinite linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper"></div>
+    <img class="sun" src="/example/images/sun.png" alt="">
+    <div class="orbit"></div>
+    <div class="earth-warp">
+        <img class="earth" src="/example/images/earth.png" alt="">
+        <img class="moon" src="/example/images/moon.png" alt="">
+    </div>
+    
+</body>
+</html>

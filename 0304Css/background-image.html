@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+    <style>
+        .content{
+            width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            margin: 10px auto;
+            /* background-color,background-repeat */
+            /* background-image: url(); */
+            /* 地圖網址 */
+            background: url(example/images/map.png) center center no-repeat;
+            /* 位置置中(水平垂直皆居中) */
+            /* background-position: 500px 200px; */
+            /* 位置距離 */
+            /* background: url(example/images/1.png) left center no-repeat,url(example/images/4.png)right center no-repeat,url(example/images/map.png) center center; */
+            /* 放置多重背景圖片 */
+            /* background-size: 100px auto,200px 200px,auto; */
+            /* 分別是圖片1、2、3的大小 (寬、長)*/
+            border: 4px solid #ccc;
+            /* 圖片邊框 */
+        }
+        .cover{
+            background-size: cover;
+            /* 圖片剛好把區塊塞滿 */
+        }
+        .contain{
+            background-size: contain;
+            /* 可以看到完整的圖片 */
+        }
+    </style>
+</head>
+<body>
+    <div class="content"></div>
+    <div class="content cover"></div>
+    <div class="content contain"></div>
+</body>
+</html>

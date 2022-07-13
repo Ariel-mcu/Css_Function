@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter濾鏡</title>
+    <style>
+        body{
+            background: #eee;
+        }
+        img{
+            width: 200px;
+            transition: .4s;
+            margin: 10px;
+        }
+        .blur:hover{
+            filter: blur(10px);
+            /* 滑鼠游標移過去模糊效果 */
+        }
+        .brightness:hover{
+            filter: brightness(200%);
+            /* 調整圖片亮度 */
+        }
+        .contrast:hover{
+            filter: contrast(200%);
+            /* 調整圖片對比 */
+        }
+        .grayscale:hover{
+            filter: grayscale(20%);
+            /* 調整圖片灰階度 */
+        }
+        .saturate:hover{
+            filter: saturate(200%);
+            /* 調整圖片飽和度*/
+        }
+        .hue:hover{
+            filter: hue-rotate(230deg);
+            /* 調整圖片色相轉換*/
+        }
+        .invert:hover{
+            filter: invert(100%);
+            /* 調整圖片副片效果*/
+        }
+        .sepia:hover{
+            filter: sepia(100%);
+            /* 調整圖片懷舊泛黃效果*/
+        }
+        .drop-shadow:hover{
+            filter: drop-shadow( 0 0 8px #333);
+            /* 調整圖片陰影效果，四個參數*/
+        }
+        .box-shadow:hover{
+            box-shadow: 0 0 5px #333;
+            /* 調整圖片陰影效果 ，5個參數*/
+        }
+    </style>
+</head>
+<body>
+    <img class="blur" src="/example/images/dr_strange.jpg" alt="">
+    <img class="brightness" src="/example/images/dr_strange.jpg" alt="">
+    <img class="contrast" src="/example/images/dr_strange.jpg" alt="">
+    <img class="grayscale" src="/example/images/dr_strange.jpg" alt="">
+    <img class="saturate" src="/example/images/dr_strange.jpg" alt="">
+    <img class="hue" src="/example/images/dr_strange.jpg" alt="">
+    <img class="invert" src="/example/images/dr_strange.jpg" alt="">
+    <img class="sepia" src="/example/images/dr_strange.jpg" alt="">
+    <img class="drop-shadow" src="/example/images/dr_strange.jpg" alt="">
+    <img class="box-shadow" src="/example/images/dr_strange.jpg" alt="">
+    <img class="box-shadow" src="/example/images/picture.svg" alt="">
+    <img class="drop-shadow" src="/example/images/picture.svg" alt="">
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border image</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 20px solid transparent;
+            /* 邊框的粗細/線條樣式/顏色透明(通常有圖片會設定透明的顏色) */
+            display: inline-block;
+
+        }
+        .stretch{
+            /* 圖形延展 */
+            border-image: url(example/images/border-image2.png) 20 stretch;
+            /* 最後面參數決定相框的形狀(20無限延伸) */
+        }
+        .round{
+            /* 圖形重複 */
+            border-image: url(example/images/border-image2.png) 20 round;
+        }
+        .repect{
+            /* 重複 */
+            border-image: url(example/images/border-image2.png) 20 repeat;
+        }   
+    </style>
+</head>
+<body>
+    <div class="box stretch"></div>
+    <div class="box round"></div>
+    <div class="box repect"></div>
+</body>
+</html>

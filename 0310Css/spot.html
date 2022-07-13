@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仙台</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <style>
+        .wrapper{
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "header header header header"
+            "nav nav nav nav"
+            "main main main aside"
+            "footer footer footer footer"
+            ;
+            grid-column-gap: 20px;
+        }
+        .wrapper>*{
+            
+        }
+        .wrapper img{
+            max-width: 100%;
+        }
+        header{
+            grid-area: header;
+        }
+        nav{
+            grid-area: nav;
+            background: #ccc;;
+        }
+        main{
+            grid-area: main;
+            line-height: 1.6;;
+        }
+        .main-nav{
+            margin: 0;
+            list-style: none;
+            padding:0;
+            display: flex;
+        }
+        .main-nav a{
+            display: block;
+            padding: 8px 16px;
+            color: #333;
+            text-decoration: none;
+        }
+        .main-nav a:hover, .main-nav li.active a{
+            background: #fff;
+        }
+        aside{
+            grid-area: aside;
+        }
+        .aside-list{
+            list-style: none;
+            margin:0;
+            padding:0;
+        }
+        .aside-list a{
+            display: block;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            text-decoration: none;
+            color:#333;
+        }
+        .aside-list a:hover{
+            background: #eee;
+        }
+        footer{
+            border-top: 1px solid #ccc;
+            grid-area: footer;
+            text-align: center;
+            padding: 20px 0;
+        }
+        @media screen and (max-width: 768px){
+            .wrapper{
+                grid-template-columns: 1fr;
+                grid-template-areas: "header"
+                "nav"
+                "main"
+                "aside"
+                "footer";
+            }
+            .main-nav li{
+                text-align: center;
+                flex: 1 0 0;
+            }
+            main{
+                display: flex;
+                flex-direction: column;
+            }
+            main iframe{
+                order: 1;
+            }
+            main,aside{
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="/example/images/japan-tohoku.jpg" alt="">
+        </header>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="">首頁</a></li>
+                <li class="active"><a href="">地區列表</a></li>
+                <li><a href="">商店</a></li>
+                <li><a href="">關於我們</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <h1>仙台市</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d400704.1733865319!2d140.48864954004213!3d38.314219402360955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a2aee30cd55d3%3A0xba2579e0b846b1ee!2z5pel5pys5a6u5Z-O57ij5LuZ5Y-w5biC!5e0!3m2!1szh-TW!2stw!4v1646894878171!5m2!1szh-TW!2stw" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <img src="example/images/a3000002_main.jpg" alt="仙臺市">
+                <p>仙臺市（日語：仙台市〔仙臺市〕／せんだいし Sendai shi */?）是日本宮城縣縣治，位於宮城縣中部，為東北地方最大都市，同時也是東北地方唯一的政令指定都市。市名一般認為得名於古城「千代城」，於1600年由安土桃山時代名將伊達政宗擴建並改名為同音的「仙臺」，此詞係出自唐代韓翃的七言律詩《同題仙遊觀》。由於全市綠化比例高，而有「杜之都」（森林之都）之譽。</p>
+                <h2>歷史</h2>
+                <h3>創建仙臺城的武將</h3>
+                <p>仙臺藩主伊達政宗最早在此建城，奠定了現在仙臺市的市街基礎。伊達政宗自1600年開始築城，之後不斷推行新計畫，進行城建設計和開發等。當時的仙臺非常繁榮，西班牙的使節形容當時的情形為—東西南北人來人往，勝似江戶（現在的東京）。</p>
+                <p>仙臺的街道既重功能性又具有現代化城市的特點，其發展完全歸功於伊達政宗的遠見，他為未來的仙臺市的發展打好基礎。仙臺的街道佈局和現在發展情形連同廣瀨川一起，從伊達政宗所建造的仙臺古城遺跡上往下俯瞰，一覽無遺。</p>
+            </article>
+        </main>
+        <aside>
+            <h3>周圍景點</h3>
+            <ul class="aside-list">
+                <li>
+                    <a href="">仙臺古城遺蹟</a>
+                </li>
+                <li>
+                    <a href="">仙臺市博物館</a>
+                </li>
+            </ul>
+        </aside>
+        <footer>&copyせんだいし</footer>
+    </div>
+</body>
+</html>

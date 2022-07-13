@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip Path 區塊裁切</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            transition: .5s;
+            display: inline-block;
+            /* 直的變衡的 */
+            margin: 10px;
+        }
+        .box img{
+            width: 100%;
+        }
+        .circle{
+            clip-path: circle(30% at 50% 50%);
+            /* 前面50%為大小，後面兩個50%是中心點 */
+        }
+        .circle:hover{
+            clip-path: circle(50% at 50% 50%);
+            /* 設動態有放大縮小的效果 */
+        }
+        .ellipse{
+            clip-path: ellipse(30% 50% at 50%);
+            /* 橢圓 */
+        }
+        .inset{
+            clip-path: inset(0 10px 20px 30px round 10% 20% 30% 50%);
+            /* 可以設圖四邊的距離根圓角 */
+        }
+        .trangle{
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+            /* 三角形，座標點頂點、左邊、右邊 */
+        }
+        .diamond{
+            clip-path: polygon(50% 10%, 90% 50%, 50% 90%, 10% 50%);
+            /* 菱形 */
+        }
+        .diamond:hover{
+            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            /* 菱形動態 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box circle">
+        <img src="/example/images/dr_strange.jpg" alt="">
+    </div>
+    <div class="box ellipse">
+        <img src="/example/images/dr_strange.jpg" alt="">
+    </div>
+    <div class="box inset">
+        <img src="/example/images/dr_strange.jpg" alt="">
+    </div>
+    <div class="box trangle">
+        <img src="/example/images/dr_strange.jpg" alt="">
+    </div>
+    <div class="box diamond">
+        <img src="/example/images/dr_strange.jpg" alt="">
+    </div>
+</body>
+</html>

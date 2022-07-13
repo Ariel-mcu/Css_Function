@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fb</title>
+    <link rel="stylesheet" href="/example/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --main-color:#3B5998;
+            --main-color-hover:#8B9DC3;
+            --main-color-border:#AAA;
+            --main-color-tip:#666666;
+            --img-width:180px;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        a, a:link{
+            color: var(--main-color);
+            text-decoration: none;
+        }
+        body{
+            background: #f7f7f7;
+        }
+        /*======================= 模組 =======================*/
+        .container{
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .list-unstyled{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*======================= 樣式 =======================*/
+
+        /*======================= header =======================*/
+        .main-header{
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 30px;
+        }
+        @media screen and (max-width:768px){
+            .main-header{
+                padding: 14px 15px;
+            }
+        }
+        .logo{
+            width: 68px;
+            height: 68px;
+        }
+        .main-nav{
+            background: var(--main-color);
+        }
+        .main-nav ul{
+            display: flex;
+        }
+        .main-nav a{
+            color: #fff;
+            display: block;
+            padding: 16px 20px;
+        }
+        .main-nav a:hover, .main-nav li.active a{
+            background: var(--main-color-hover);
+        }
+        @media screen and (max-width: 768px){
+            .main-nav ul li{
+                text-align: center;
+                flex: 1 0 0;
+            }
+            .main-nav a{
+                padding: 16px 0;
+            }
+        }
+
+        
+
+        /*======================= main-block =======================*/
+        .main-block{
+            display: flex;
+            margin-top: 14px;
+            min-height: calc(100vh - 215px);
+        }
+
+        /* aside-left */
+        .page-img{
+            width: var(--img-width);
+            height: var(--img-width);
+            border: 1px solid var(--main-color-border);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0 0 17px 0;
+        }
+        .page-img img{
+            width: 100%;
+            object-fit: cover;
+        }
+       
+        .aside-menu a{
+            display: block;
+            padding: 9px 0px 9px 18px;
+        }
+        .aside-menu a:hover, .aside-menu li.active a{
+            background: #fff;
+            border-left: 6px solid var(--main-color);
+            padding-left: 12px;
+        }
+
+
+        /* main-content */
+        .page-main{
+            margin: 0 20px;
+            flex-grow: 1;
+        }
+        .main-article{
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 10px;
+            border: 1px solid var(--main-color-border);
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.25;
+        }
+        .main-article h1{
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 0 3px 0;
+        }
+        .article-time{
+            font-size: .9rem;
+            color: var(--main-color-tip);
+            margin-bottom: 14px;
+        }
+        .content{
+            font-size: 1rem;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        /* aside-right */
+        .aside-right{
+            /* display: flex;
+            align-items: flex-end; */
+            align-self: flex-end;
+        }
+        .aside-right img{
+            width: 100%;
+            align-self: flex-end;
+        }
+        @media screen and (max-width: 768px){
+            /* flex direction(wrap兩種方法都可以) */
+            .main-block{
+                flex-direction: column;
+                padding: 0 15px;
+            }
+            /* flex wrap */
+            /* .main-block{
+                flex-wrap: wrap;
+                padding: 0 15px;
+            } */
+            .aside-left{
+                width: 100%;
+            }
+            .page-main{
+                width: 100%;
+                margin: 0;
+            }
+            .aside-image{
+                margin:  0 auto 17px;
+            }
+            .aside-menu ul{
+                display: flex;
+                margin-bottom: 7px;
+            }
+            .aside-menu li{
+                flex: 1 0 0;
+                text-align: center;
+            }
+            .aside-right img{
+                display: none;
+            }
+            .aside-menu a{
+                padding: 9px 0 9px 0px;
+                border-left: none;
+                border-bottom: 6px solid transparent;
+                
+            }
+            .aside-menu a:hover, .aside-menu li.active a{
+                background: #fff;
+                border-left: 6px solid var(--main-color);
+                padding-left: none;
+            }
+        }
+        .girl-img{
+            width: 180px;
+        }
+        .girl-img img{
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /*======================= footer =======================*/
+        .main-footer{
+            text-align: center;
+            padding: 16px;
+        }
+
+        /* RWD */
+        @media screen and (max-width: 500px) {
+            .main-nav ul{
+                justify-content: space-between;
+            }
+            .main-nav a{
+                padding: 16px 12px;
+            }
+
+            .main-block{
+                flex-flow: column;
+                align-items: center;
+            }
+
+            .aside-left{
+                width: 100%;
+            }
+            .page-main{
+                width: 100%;
+                margin: 0;
+            }
+            .page-img{
+                margin: 0 auto 34px;
+            }
+            .aside-menu ul {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 7px;
+            }
+            .aside-menu li{
+                flex: 1 1;
+            }
+            .aside-menu a{
+                padding: 7px 0;
+                text-align: center;
+            }
+            .aside-menu a:hover, .aside-menu li.active a{
+                background: #fff;
+                border-left: none;
+                border-bottom: 6px solid var(--main-color);
+                padding-left: 0px;
+            }
+            .aside-right{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a>
+            <img  class="logo" src="/example/images/fb-logo.png" alt="">
+        </a>
+        <div>
+            <a href="">Login</a> |
+            <a href="">Sing up</a>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="list-unstyled">
+                <li class="active"><a href="">Home</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Story</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <article class="container">
+        <section class="main-block">
+            <!-- aside-left -->
+            <aside class="aside-left">
+                <figure class="page-img">
+                    <img src="/example/images/logo.jpg" alt="">
+                </figure>
+                <div class="aside-menu">
+                    <ul class="list-unstyled">
+                        <li class="active"><a href="">Posts</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Photos</a></li>
+                        <li><a href="">Films</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <main class="page-main">
+                <article class="main-article">
+                    <h1>Uniform Map</h1>
+                    <span class="article-time"><time>2022/01/18</time></span>
+                    <p class="content">
+                        制服是指一群來自相同團體的人穿著著統一樣式的服裝，用以辨識其正在做進行的共同事情，或者用來分別其職業或特別身份，例如： 學生、警察和軍人等。制服也可以制定階級，例如：在香港，初級護士的制服是粉紅色，正式護士的制服是白色等。另外，制服是生活中角色扮演的道具，表示服從某種規章制度下的人的工作服裝，例如：囚犯服裝。 
+                    </p>
+                    <p class="content">
+                        有些職業的制服是全世界統一樣式，例如民用航空飛機駕駛員的制服，一般為黑色，佩戴飛行標誌和肩牌，並且在袖口處縫有代表級別的標誌，戴大檐帽及海軍制服等等。 
+                    </p>
+                </article>
+                
+            </main>
+            <!-- aside-right -->
+            <aside class="aside-right">
+                <div class="girl-img">
+                    <img src="/example/images/girl_acg2.png" alt="">
+                </div>
+            </aside>
+            
+        </section>
+    </article>
+    
+    <footer class="main-footer">&copy; Facebook</footer>
+</body>
+</html>

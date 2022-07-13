@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg clip</title>
+    <style>
+        .box{
+            width: 250px;
+            height: 250px;
+            display: inline-block;
+            border: 10px dashed #ccc;
+            background: url(example/images/check.jpg) left top;
+            /* 不重複、決定圖片起始位置 */
+        }
+        .border{
+            background-clip: border-box;
+            /* 背景範圍 */
+        }
+        .padding{
+            background-clip: padding-box;
+        }
+        .content{
+            background-clip: content-box;
+        }
+        h1{
+            /* 設定文字背景 */
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            background: url(example/images/check.jpg);
+            -webkit-background-clip: text;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box border"></div>
+    <div class="box padding"></div>
+    <div class="box content"></div>
+    <h1>Hello World</h1>
+</body>
+</html>

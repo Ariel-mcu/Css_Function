@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD</title>
+    <style>
+        /* body{
+            background: pink;
+            transition: .4s;
+        }
+        @media screen and (max-width: 800px){
+            設定上邊界(下邊界設不設都一樣)
+            body{
+            background: rgb(163, 228, 248);
+            }
+        }
+        @media screen and (max-width: 600px){
+            由大寫到小視窗
+            body{
+            background: rgb(203, 163, 248);
+            }
+        } */
+        .banner{
+            height: 300px;
+            background: url(example/images/child-1280.jpg) center center;
+            background-size: cover;
+        }
+        body{
+            background: rgb(203, 163, 248);
+            transition: .4s;
+        }
+        @media screen and (min-width: 600px){
+            /* 由小寫到大視窗 */
+            body{
+                background: rgb(163, 228, 248);
+            }
+            .banner{
+            background: url(example/images/child-640.jpg);
+        }
+        }
+        @media screen and (min-width: 800px){
+            body{
+                background: pink;
+            }
+        }    
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <div class="banner"></div>
+</body>
+</html>

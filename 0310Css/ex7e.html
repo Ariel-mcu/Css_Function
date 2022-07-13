@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7e 地球自轉</title>
+    <style>
+        @keyframes rotate{
+            0%{
+                background-position: left top;
+            }
+            100%{
+                background-position: -500px top;
+                /* 剛好一圈完整的 */
+            }
+        }
+        body{
+            background: url(/example/images/space-bg.jpg);
+        }
+        .earth{
+            width: 281px;
+            height: 281px;
+            margin: 20px auto;
+            background: url(/example/images/earth2.jpg);
+            border-radius: 50%;
+            animation: rotate 3s infinite linear;
+            box-shadow: 0 0 10px #fff,0 0 40px rgb(135, 135, 212),0 0 40px #000 inset;
+        }
+    </style>
+</head>
+<body>
+    <div class="earth"></div>
+</body>
+</html>

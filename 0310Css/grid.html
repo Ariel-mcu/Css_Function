@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 切版</title>
+    <style>
+        .wrapper{
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ccc;
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            /* 等於grid-template-columns: 1fr 1fr 1fr 1fr; */
+            /* 切格線(四排)，單位 auto、px、rem、vw、fr(拿剩餘空間分配) */
+            /* grid-column-gap: 10px; */
+            /* 欄(行)間距 */
+            /* padding: 10px; */
+            grid-template-rows: auto 150px auto;
+            /* 指定列的高度 */
+            /* grid-row-gap: 10px; */
+            /* 列的間距 */
+            /* grid-gap: 20px 20px; */
+            /* 第一個列距，第二個行距 */
+            /* justify-content: start; */
+            /* 水平方向對齊 */
+            /* align-content: space-around; */
+            /* 垂直對齊 */
+            align-items: end;
+            /* start靠上對齊、end靠下對齊 */
+
+        }
+        .item{
+            border: 1px solid rgb(173, 79, 202);
+            padding: 10px;
+            background: rgb(232, 203, 243);
+            /* margin: 10px; */
+            
+        }
+        .item6{
+            /* 也可設定單個 */
+            align-self: start;
+            justify-self: end;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item6">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+    </div>
+</body>
+</html>

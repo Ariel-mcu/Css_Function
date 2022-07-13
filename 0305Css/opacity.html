@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity 透明度</title>
+    <style>
+        .wrapper{
+            width: 400px;
+            height: 300px;
+            position: relative;
+            /* 容器參考 */
+            margin: 0 auto;
+        }
+        .map{
+            width: 400px;
+            height: 300px;
+            background: url(example/images/map.png) center center;
+            background-size: cover;
+            opacity: 1;
+            /* 透明度 */
+        }
+        .wrapper:hover .map{
+            opacity: .4;
+        }
+        h1{
+            text-align: center;
+            /* 字的位置置中 */
+            opacity: .2;
+            position: absolute;
+            /* 參考對應位置(wrapper) */
+            bottom: 0;
+            /* left: 50%; */
+            color: #fff;
+            background: linear-gradient(to bottom,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.815));
+            margin: 0;
+            padding: 10px 0;
+            width: 100%;
+        }
+        .wrapper:hover h1{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div   div class="map">
+        
+        </div>
+        <h1>U.S.A</h1>
+    </div>
+</body>
+</html>

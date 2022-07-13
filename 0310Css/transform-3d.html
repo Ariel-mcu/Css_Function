@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfrom 3D</title>
+    <style>
+        img{
+            transition: .4s;
+            width: 200px;
+            /* transform-origin: left top; */
+            /* 變形的中心點 */
+        }
+        .wrapper{
+            /* 背景 */
+            display: flex;
+            background: #ccc;
+            
+        }
+        .box{
+            /* 距離平面景深 */
+            perspective: 1000px;
+            margin: 10px;
+            perspective-origin: center top;
+            /* 攝影中心點 */
+        }
+        .translateZ:hover{
+            /* Z軸的位移 */
+            transform: translateZ(-50px);
+        }
+        .rotateX:hover{
+            transform: rotateX(180deg);
+            /* X軸的位移 */
+        }
+        .rotateY:hover{
+            transform: rotateY(180deg);
+            /* Y軸的位移 */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <img class="translateZ" src="/example/images/dr_strange.jpg" alt="">
+        </div>
+        <div class="box">
+            <img class="rotateX" src="/example/images/dr_strange.jpg" alt="">
+        </div>
+        <div class="box">
+            <img class="rotateY" src="/example/images/dr_strange.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

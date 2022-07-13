@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仙台</title>
+    <link rel="stylesheet" href="">
+    <style>
+        .wrapper{
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            background: #eee;
+            grid-template-areas: "header header header header"
+            "nav nav nav nav"
+            "main main main aside "
+            "footer footer footer footer"
+            ;
+        }
+        .wrapper>*{
+            
+        }
+        header{
+            
+            grid-area: header;
+        }
+        nav{
+            
+            grid-area: nav;
+        }
+        main{
+            line-height: normal;
+            grid-area: main;
+        }
+        .main-nav{
+            margin: 0;
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        .main-nav a{
+            color: #333;
+            padding: 6px 16px;
+            display: block;
+            text-decoration: none;
+        }
+        aside{
+            
+            grid-area: aside;
+        }
+        footer{
+            border-top: 1px solid ;
+            grid-area: footer;
+            text-align: center;
+
+        }
+        @media screen and (max-width: 768px){
+            .wrapper{
+                grid-template-columns: 1fr;
+                grid-template-areas: "header"
+                "nav"
+                "main"
+                "aside"
+                "footer";
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="/example/images/japan-tohoku.jpg" alt="">
+        </header>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="">首頁</a></li>
+                <li><a href="">地區列表</a></li>
+                <li><a href="">商店</a></li>
+                <li><a href="">關於我們</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <h1>仙台市</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d400701.1958615975!2d140.48864887023475!3d38.3147582165777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a2aee30cd55d3%3A0xba2579e0b846b1ee!2z5pel5pys5a6u5Z-O57ij5LuZ5Y-w5biC!5e0!3m2!1szh-TW!2stw!4v1646896490909!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <h1>關於仙台</h1>
+                <h2></h2>
+            </article>
+        </main>
+        <aside>
+            <h3>周邊景點</h3>
+            <ul class="aside-list"></ul>
+        </aside>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

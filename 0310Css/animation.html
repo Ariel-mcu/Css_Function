@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes ani{
+            0%{
+                width: 100px;
+            }
+            50%{
+                width: 200px;
+                background: red;
+            }
+            100%{
+                width: 100px;
+            }
+        }
+        .container{
+            
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin: 10px 0;
+            animation: ani 2s infinite;
+        }
+        .liner{
+            animation-timing-function: inherit;
+        }
+        .ease-in{
+            animation-timing-function: ease-in;
+        }
+        .cubic{
+            animation-timing-function:
+            cubic-bezier(0,.73,.97,.02);
+        }
+        .steps{
+            /* 漸變動畫 */
+            animation-timing-function: steps(4);
+        }
+        .steps-start{
+            animation-timing-function: steps(4 start);
+        }
+        .steps-end{
+            animation-timing-function: steps(4 end);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">ease</div>
+        <div class="box linear">linear</div>
+        <div class="box ease-in">ease-in</div>
+        <div class="box cubic">cubic</div>
+        <div class="box steps">steps</div>
+        <div class="box steps-start">steps-start</div>
+        <div class="box steps-end">steps-end</div>
+    </div>
+</body>
+</html>

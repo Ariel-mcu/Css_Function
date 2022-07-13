@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 動畫</title>
+    <style>
+        @keyframes change{
+            /* 背景從粉變紅 */
+            from{
+                background: pink;
+            }
+            to{
+                background: red;
+            }
+        }
+        @keyframes change2{
+            /* 用%數來表示屬性 */
+            0%{
+                background: pink;
+            }
+            50%{
+                background: red;
+                width: 300px;
+                /* 變大成300px，再變回來200px */
+            }
+            100%{
+                background: rgb(11, 234, 241);
+            }
+        }
+        @keyframes changecolor{
+            /* 用%數來表示屬性 */
+            0%{
+                background: pink;
+            }
+            50%{
+                background: red;
+            }
+            100%{
+                background: rgb(11, 234, 241);
+            }
+        }
+        
+        .box{
+            width: 200px;
+            height: 200px;
+            background: pink;
+            animation-name: change2;
+            /* 動畫命名，直接套上去 */
+            animation-duration: 2s;
+            /* 顏色變換一秒 */
+            /* animation-delay: .5s; */
+            /* 顏色延遲 */
+            animation-iteration-count: 4;
+            /* 動畫播放次數 ，infinite動畫無限次撥放*/
+            animation-direction: alternate-reverse;
+            /*alternate-revers 0%~100%、100%~0%，normal 0%~100%，設定動畫撥放的方向 */
+            /* animation-fill-mode: backwards; */
+            /* 停止的時候backwards會回到一開始設定狀態，both則是停在最後的狀態 */
+            animation: change2 2s alternate infinite;
+        }
+        .box:hover{
+            animation-play-state: paused;
+            /* 沒有動畫 */
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin: 10px;
+            animation: changeColor 2s infinite alternate, circle 1s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+</body>
+</html>

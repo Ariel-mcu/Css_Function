@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size</title>
+    <style>
+        html{
+            font-size: 16px;
+        }
+        div{
+            font-size: 2rem;
+            /* 用2rem就不會跟著倍率改變大小 */
+            /* font-size: 2em; */
+            /* 1em代表一倍基本文字大小(基本文字大=16px)，以此類推 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        This is content in div.
+        <div>
+            This is content in div div.
+             <!-- 會變成四倍(4em)文字大小 -->
+            <div>
+                This is content in div div div.
+            </div>
+        </div>
+    </div>
+    <a href="">link1
+        <a href="">link2</a>
+        <!-- a標籤不能自己包自己 -->
+    </a>
+</body>
+</html>

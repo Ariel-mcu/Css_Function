@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var</title>
+    <style>
+        :root{
+            /* 全站使用的變數定義:root，等同html(全域變數) */
+            box-sizing: border-box;
+            --main-color:blue;
+        }
+        h1{
+            --main-color: rgb(122, 130, 240);
+            /* 設定主要顏色 ，css變數是有範圍的(範圍設定變數)*/
+            color: var(--main-color);
+            /* 直接輸入主要顏色 */
+            border-left: 10px solid var(--main-color);
+            padding-left: 10px;
+        }
+        .box{
+            --main-color:rgb(219, 141, 219);
+            --box-width:160px;
+            /* 設定好box的寬度(區域變數) ，比較小的變數可以覆蓋大的(root)*/
+            width: var(--box-width);
+            /* 依樣直接輸入 */
+            height: var(--box-width);
+            background: var(--main-color);
+            margin: 10px;
+        }
+        .content{
+            width: 500px;
+            height: 500px;
+            background: #ccc;
+            display: flex;
+        }
+        .content *{
+            border: 2px solid red;
+            /* *號比較不常用，視情況而定(權重最小且跑比較久) */
+        }
+        .card{
+            --card-width:calc(25% - 20px);
+            width: var(--card-width);
+            height: var(--card-width);
+            background: pink;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello world!!</h1>
+    <div class="box"></div>
+    <div class="box" style="--main-color:pink"></div>
+    <!-- 寫在style權重又可以覆蓋.box裡的 main color -->
+    <div class="content">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+</body>
+</html>

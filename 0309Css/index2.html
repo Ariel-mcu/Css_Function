@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook</title>
+    <link rel="stylesheet" href="example/css/normalize.css">
+    <style>
+        /* 標籤 */
+        :root{
+            --main-color: #3B5998;
+            --main-color-hover: #8B9DC3;
+        }
+        *{
+            box-sizing: border-box;
+            /* 尺寸算法(bootstrap會自行加入) */
+        }
+        a, a:link{
+            color: var(--main-color);
+            text-decoration: none;
+            /* 消除底線 */
+        }
+        body{
+            background: #F7F7F7;
+        }
+        /* 模組 */
+        .container{
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            /* 區塊模組置中(選單) */
+        }
+        .list-unstyled{
+            list-style: none;
+            /* 消去點點 */
+            margin: 0;
+            padding: 0;
+        }
+        .object-cover{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* 圖片和框的大小相容 */
+        }
+        /* 樣式 */
+        .main-header{
+            background: #fff;
+            padding: 14px 30px;
+            /* 調整位置，上下14左右30 */
+            display: flex;
+            justify-content: space-between;
+            /* 分散到兩邊 */
+        }
+        .logo{
+            width: 68px;
+            /* 設定一邊即可 */
+            height: 68px;
+        }
+        .main-nav{
+            background: var(--main-color);
+        }
+        .main-nav ul{
+            display: flex;
+            /* 選項並排 */
+        }
+        .main-nav a{
+            color: #fff;
+            padding: 16px 20px;
+            /* 欄位距離，上下16、左右20 */
+            display: block;
+            /* 選項攔撐開 */
+        }
+        .main-nav a:hover, .main-nav li.active a{
+            background: var(--main-color-hover);
+            /* 同樣兩種都有hover動態功能 */
+        }
+        .main-block{
+            display: flex;
+            margin-top: 14px;
+            min-height: calc(100vh - 220px);
+            /* 設定©Facebook的位置 */
+        }
+        .page-image{
+            --img-width: 180px;
+            width: var(--img-width);
+            height: var(--img-width);
+            border: 1px solid #aaa;
+            border-radius: 10px;
+            margin: 0 0 17px 0;
+            overflow: hidden;
+            /* 修正圖片和框的角度 */
+        }
+        .aside-menu a{
+            display: block;
+            color: #000;
+            padding: 9px 0 9px 18px;
+            border-left: 6px solid transparent;
+            /* 修正游標一過去部會亂跳 */
+        }
+        .aside-menu a:hover, .aside-menu li.active a{
+            border-left: 6px solid var(--main-color);
+            background: #fff;
+            /* 選單背景白色更鮮明 */
+        }
+        .page-main{
+            margin: 0 20px;
+            flex-grow: 1;
+            /* 設定女生圖片大小 */
+        }
+        .main-article{
+            background: #fff;
+            padding: 30px 25px;
+            border-radius: 10px;
+            border: 1px solid #aaa;
+            line-height: 1.5;
+            /* 行距通常 1.5~1.7 之間 */
+        }
+        .main-article h1{
+            margin-top: 0;
+            /* h1上邊界範圍縮小 */
+            margin-bottom: 3px;
+            /* h1下邊界範圍 */
+        }
+        .article-time{
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .aside-right img{
+            width: 180px;
+            /* 設定女生位子 */
+        }
+        .main-footer{
+            padding: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a href="/"><img class="logo" src="/example/images/fb-logo.png" alt=""></a>
+        <div>
+            <a href="">Log in</a> |
+            <a href="">Sign up</a>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="list-unstyled">
+                <li class="active"><a href="">Home</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Story</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main-block">
+            <aside class="aside-left"> 
+                <figure class="page-image">
+                    <img class="object-cover" src="/example/images/logo.jpg" alt="">
+                </figure>
+                <ul class="list-unstyled aside-menu">
+                    <li class="active"><a href="">Posts</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Photo</a></li>
+                    <li><a href="">Films</a></li>
+                </ul>
+
+            </aside>
+            <main class="page-main">
+                <article class="main-article">
+                    <h1>Uniform Map</h1>
+                    <div class="article-time"><time>2022/01/18</time></div>
+                    <p>制服是指一群來自相同團體的人穿著著統一樣式的服裝，用以辨識其正在做進行的共同事情，或者用來分別其職業或特別身份，例如： 學生、警察和軍人等。制服也可以制定階級，例如：在香港，初級護士的制服是粉紅色，正式護士的制服是白色等。另外，制服是生活中角色扮演的道具，表示服從某種規章制度下的人的工作服裝，例如：囚犯服裝。 </p>
+                    <p>有些職業的制服是全世界統一樣式，例如民用航空飛機駕駛員的制服，一般為黑色，佩戴飛行標誌和肩牌，並且在袖口處縫有代表級別的標誌，戴大檐帽及海軍制服等等。 </p>
+                </article>
+            </main>
+            <aside class="aside-right">
+                <img src="/example/images/girl_acg2.png" alt="">
+            </aside>
+        </div>
+    </div>
+    <footer class="main-footer">
+        ©Facebook
+    </footer>
+</body>
+</html>

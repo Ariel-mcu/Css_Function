@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border radius</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            background: rgb(91, 210, 214);
+            margin: 10px;
+            
+            /* 四邊圓角  */
+            
+        }
+        /* .box2{
+            width: 150px;
+            height: 150px;
+            background: rgb(235, 129, 129);
+            margin: 10px;
+            border-radius: 20%;
+            用%會更圓，最圓是50%(圓形)
+        }*/
+        .radius1{
+            border-radius: 10px;
+        }
+        .radius2{
+            border-radius: 20%;
+        }
+        .radius3{
+            border-radius: 10px 20px 30px 40px;
+            /* 四個角設不一樣的圓角，方向逆時針一圈 */
+        }
+        .radius4{
+            border-radius: 10px 20px 30px ;
+            /* 第四個角跟第二角兌現一樣 ，會用對邊的去補角度*/
+        }
+        .radius5{
+            border-radius: 10px 50px;
+            /* 對角角度一至 */
+        }
+        .radius6{
+            border-radius: 100% 0 0 0;
+            /* 扇形 */
+        }
+        .radius7{
+            border-radius: 50%;
+            /* 圓形超過50%以上(所以設50%即可) */
+        }
+        .radius8{
+            border-radius: 20px/50px;
+            /* 水桶型 */
+        }
+      
+    </style>
+    
+</head>
+<body>
+    <div class="box radius1"></div>
+    <div class="box radius2"></div>
+    <div class="box radius3"></div>
+    <div class="box radius4"></div>
+    <div class="box radius5"></div>
+    <div class="box radius6"></div>
+    <div class="box radius7"></div>
+    <div class="box radius8"></div>
+</body>
+</html>
